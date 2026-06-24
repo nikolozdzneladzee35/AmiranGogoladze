@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Energia by Borjomi × The Sniper — Partnership Proposal</title>
+<meta name="description" content="A 3-month title-fight social campaign putting Energia by Borjomi in the corner of Amiran Gogoladze 'The Sniper' for OKTAGON 93." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --black:#000000;--smoke:#101012;--card:#161618;--line:#262629;
+    --red:#ED1C24;--white:#FFFFFF;--ash:#9a9a9e;--dim:#6a6a6e;
+    --maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--white);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--red);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  .display{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.02em}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:10px}
+  .reticle{width:13px;height:13px;flex:none;display:inline-block}
+  .reticle circle,.reticle line{stroke:currentColor;stroke-width:1.4;fill:none}
+
+  .section{padding:104px 0;position:relative}
+  .section-head{margin-bottom:54px;max-width:760px}
+  .section-title{font-size:clamp(2rem,5vw,3.4rem);margin:18px 0 0}
+  .rule{height:3px;width:96px;background:var(--red);margin-top:26px}
+  .lede{color:var(--ash);font-size:1.08rem;max-width:640px;margin-top:22px}
+
+  /* top bar */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,0));transition:background .3s var(--ease)}
+  .topbar.solid{background:rgba(0,0,0,.94);border-bottom:1px solid var(--line)}
+  .lockup{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.04em}
+  .lockup b{color:var(--red)}
+  .topcta{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);padding:9px 16px;border-radius:2px;transition:border-color .25s,color .25s}
+  .topcta:hover{border-color:var(--red);color:var(--red)}
+
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('images/hero_flag.jpg') center 22% / cover no-repeat;z-index:0}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#000 2%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.25) 100%),linear-gradient(to right,rgba(0,0,0,.78),rgba(0,0,0,.15) 58%,transparent)}
+  .hero-reticle{position:absolute;top:96px;right:6%;width:min(34vw,360px);opacity:.5;color:var(--red);z-index:1;pointer-events:none}
+  .hero-reticle circle,.hero-reticle line{stroke:currentColor;fill:none}
+  .hero-inner{position:relative;z-index:2;padding-bottom:66px;width:100%}
+  .hero h1{font-size:clamp(2.6rem,8vw,6rem);margin:22px 0 18px}
+  .hero h1 .x{color:var(--red);font-weight:800;margin:0 .04em}
+  .hero h1 span.line{display:block}
+  .hero-sub{font-family:'JetBrains Mono',monospace;color:#d6d6d8;font-size:clamp(.78rem,1.7vw,.98rem);letter-spacing:.1em;text-transform:uppercase;margin-bottom:34px;max-width:600px}
+  .hero-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+
+  .btn{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;padding:16px 28px;border-radius:3px;border:none;cursor:pointer;transition:transform .2s var(--ease),background .2s}
+  .btn:hover{background:#fff;color:var(--black);transform:translateY(-2px)}
+  .btn .arrow{transition:transform .2s var(--ease)}
+  .btn:hover .arrow{transform:translateY(3px)}
+  .fee-tag{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.1em;color:#cfcfd2}
+  .fee-tag b{color:#fff;font-weight:700}
+
+  /* record band */
+  .record{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--smoke)}
+  .record-row{display:flex;flex-wrap:wrap}
+  .record .cell{flex:1 1 0;min-width:120px;padding:34px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+  .record .cell:last-child{border-right:none}
+  .record .k{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+  .record .v{font-family:'Archivo',sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;line-height:1}
+  .record .v.red{color:var(--red)}
+
+  /* opportunity */
+  .opp{background:var(--black)}
+  .opp-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:60px;align-items:center}
+  .opp-card{border:1px solid var(--line);background:var(--smoke);border-radius:4px;padding:34px;position:relative;overflow:hidden}
+  .opp-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red)}
+  .opp-card .date{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,6vw,3.6rem);text-transform:uppercase;letter-spacing:-.02em;line-height:1}
+  .opp-card .date span{color:var(--red)}
+  .opp-card .meta{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.14em;color:var(--ash);text-transform:uppercase;margin-top:16px;line-height:2}
+  .opp-card .belt{display:inline-block;margin-top:22px;font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:.06em;border:1px solid var(--red);color:var(--red);padding:7px 14px;border-radius:2px}
+  .opp p{color:var(--ash);font-size:1.06rem;margin-bottom:18px}
+  .opp p b{color:#fff;font-weight:600}
+
+  /* why */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .why-card{border:1px solid var(--line);border-radius:4px;padding:30px;background:var(--smoke);transition:border-color .25s,transform .25s var(--ease)}
+  .why-card:hover{border-color:var(--red);transform:translateY(-4px)}
+  .why-card .num{font-family:'JetBrains Mono',monospace;color:var(--red);font-weight:700;font-size:.74rem;letter-spacing:.2em}
+  .why-card h3{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.18rem;margin:16px 0 12px;letter-spacing:.01em}
+  .why-card p{color:var(--ash);font-size:.96rem}
+
+  /* pillars */
+  .pillars{background:var(--smoke);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pillar-list{display:grid;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--black)}
+  .pillar{display:grid;grid-template-columns:64px 1fr auto;gap:28px;align-items:center;padding:28px 30px;border-bottom:1px solid var(--line);transition:background .25s}
+  .pillar:last-child{border-bottom:none}
+  .pillar:hover{background:var(--card)}
+  .pillar .idx{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.7rem;color:var(--red)}
+  .pillar .body h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.1rem;letter-spacing:.02em}
+  .pillar .body p{color:var(--ash);font-size:.95rem;margin-top:6px;max-width:560px}
+  .pillar .pct{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--white);font-size:1.05rem;letter-spacing:.05em;text-align:right}
+  .pillar .pct span{display:block;font-size:.58rem;color:var(--dim);letter-spacing:.2em;margin-top:4px}
+
+  /* table */
+  .table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .table th,.table td{padding:18px 20px;text-align:left;border-bottom:1px solid var(--line)}
+  .table thead th{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash);background:var(--smoke)}
+  .table tbody td{font-size:.98rem;color:var(--ash)}
+  .table tbody td.phase{font-family:'Archivo',sans-serif;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.02em;font-size:.95rem}
+  .table tbody td.num{font-family:'JetBrains Mono',monospace;color:#fff;font-weight:700}
+  .table tbody tr:last-child td{border-bottom:none}
+  .table tbody tr.total td{background:var(--smoke);color:#fff}
+  .table tbody tr.total td.num{color:var(--red)}
+  .note{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--dim);margin-top:18px;letter-spacing:.04em;line-height:1.8}
+
+  /* timeline */
+  .timeline{background:var(--smoke);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .phase-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--black)}
+  .phase-col{padding:30px 26px;border-right:1px solid var(--line);position:relative}
+  .phase-col:last-child{border-right:none}
+  .phase-col.peak{background:linear-gradient(180deg,rgba(237,28,36,.10),transparent)}
+  .phase-col .pnum{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.4rem;color:var(--line);line-height:1}
+  .phase-col.peak .pnum{color:var(--red)}
+  .phase-col h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1rem;margin:14px 0 6px;letter-spacing:.02em}
+  .phase-col .when{font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.14em;color:var(--red);text-transform:uppercase;margin-bottom:16px}
+  .phase-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .phase-col li{color:var(--ash);font-size:.88rem;padding-left:16px;position:relative}
+  .phase-col li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--red);border-radius:50%}
+
+  /* placements */
+  .place-feature{position:relative;min-height:440px;border:1px solid var(--red);border-radius:4px;overflow:hidden;margin-bottom:18px}
+  .place-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+  .place-feature .grad{position:absolute;inset:0;background:linear-gradient(to right,#000 6%,rgba(0,0,0,.7) 38%,transparent 68%)}
+  .place-feature .ftext{position:absolute;left:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:44px;max-width:560px;z-index:2}
+  .place-feature .badge{align-self:flex-start;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;color:var(--red);border:1px solid var(--red);padding:5px 11px;border-radius:2px;text-transform:uppercase;margin-bottom:18px}
+  .place-feature h4{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.01em;line-height:1}
+  .place-feature p{color:#d2d2d4;font-size:1rem;margin-top:14px}
+
+  .place-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .place-photo{position:relative;height:420px;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .place-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+  .place-photo .grad{position:absolute;inset:0;background:linear-gradient(to top,#000 4%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.5) 100%)}
+  .place-photo .ptext{position:absolute;left:0;right:0;bottom:0;padding:26px;z-index:2}
+  .place-card{position:relative;height:420px;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--smoke);padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+  .place .tag,.place-photo .tag,.place-card .tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  .place-photo h4,.place-card h4{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25rem;margin:10px 0 8px;letter-spacing:.01em}
+  .place-photo p,.place-card p{color:#cfcfd2;font-size:.92rem}
+  .place-card p{color:var(--ash)}
+  .place-card .stat{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.6rem;color:var(--red);line-height:1;margin-bottom:6px}
+
+  /* kpis */
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .kpi{border:1px solid var(--line);border-radius:4px;padding:26px}
+  .kpi .big{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.2rem;color:#fff;line-height:1}
+  .kpi .big .u{color:var(--red);font-size:1.2rem}
+  .kpi .lbl{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;color:var(--ash);text-transform:uppercase;margin-top:12px}
+
+  /* investment */
+  .invest{background:var(--smoke);border-top:1px solid var(--line)}
+  .invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .price{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(3rem,9vw,5.2rem);text-transform:uppercase;line-height:.95;letter-spacing:-.02em}
+  .price .cur{color:var(--red);font-size:.5em;vertical-align:top}
+  .price .per{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.8rem;letter-spacing:.16em;color:var(--ash);text-transform:uppercase;margin-top:14px}
+  .terms{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--ash);line-height:2.1;letter-spacing:.04em}
+  .terms b{color:#fff}
+
+  .finalcta{position:relative;padding:130px 0;text-align:center;overflow:hidden}
+  .finalcta .reticle-bg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(80vw,640px);color:var(--red);opacity:.12;z-index:0}
+  .finalcta .reticle-bg circle,.finalcta .reticle-bg line{stroke:currentColor;fill:none}
+  .finalcta .inner{position:relative;z-index:2}
+  .finalcta h2{font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(2.2rem,6.5vw,4.6rem);line-height:.95;letter-spacing:-.02em;max-width:14ch;margin:0 auto 34px}
+  .finalcta h2 .red{color:var(--red)}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--dim)}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:900px){
+    .opp-grid,.invest-grid{grid-template-columns:1fr;gap:40px}
+    .why-grid{grid-template-columns:1fr}
+    .phase-grid{grid-template-columns:1fr 1fr}
+    .place-grid{grid-template-columns:1fr}
+    .kpi-grid{grid-template-columns:1fr 1fr}
+    .place-feature .grad{background:linear-gradient(to top,#000 10%,rgba(0,0,0,.5) 60%,rgba(0,0,0,.3))}
+    .place-feature img{object-position:75% center}
+  }
+  @media(max-width:560px){
+    .section{padding:74px 0}
+    .phase-grid{grid-template-columns:1fr}
+    .kpi-grid{grid-template-columns:1fr 1fr}
+    .pillar{grid-template-columns:44px 1fr;gap:16px}
+    .pillar .pct{grid-column:2;text-align:left;margin-top:4px}
+    .topcta{display:none}
+    .record .cell{flex:1 1 50%}
+    .place-feature .ftext{padding:30px}
+  }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar">
+  <div class="lockup">ENERGIA <b>×</b> THE SNIPER</div>
+  <a href="#cta" class="topcta">Start the campaign</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <svg class="hero-reticle" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="54"/>
+    <circle cx="100" cy="100" r="3" fill="currentColor" stroke="none"/>
+    <line x1="100" y1="6" x2="100" y2="194"/><line x1="6" y1="100" x2="194" y2="100"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Partnership Proposal · 2026</span>
+    <h1 class="display">
+      <span class="line">Energia by Borjomi</span>
+      <span class="line"><span class="x">×</span> The Sniper</span>
+    </h1>
+    <p class="hero-sub">A 3-month title-fight campaign — Amiran Gogoladze, Georgian Welterweight</p>
+    <div class="hero-actions">
+      <a href="#opportunity" class="btn">See the campaign <span class="arrow">↓</span></a>
+      <span class="fee-tag">Investment · <b>USD 3,000</b> / 3 months</span>
+    </div>
+  </div>
+</header>
+
+<!-- RECORD -->
+<section class="record">
+  <div class="wrap"><div class="record-row">
+    <div class="cell"><span class="k">Record</span><span class="v red">18–3</span></div>
+    <div class="cell"><span class="k">Finishes</span><span class="v">12</span></div>
+    <div class="cell"><span class="k">Knockouts</span><span class="v">9</span></div>
+    <div class="cell"><span class="k">Submissions</span><span class="v">3</span></div>
+    <div class="cell"><span class="k">First-round</span><span class="v">11</span></div>
+    <div class="cell"><span class="k">Sub-100s wins</span><span class="v">8</span></div>
+  </div></div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section class="section opp" id="opportunity">
+  <div class="wrap opp-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>The Opportunity</span>
+      <h2 class="display section-title">One brand, one fighter, one title shot</h2>
+      <div class="rule"></div>
+      <p style="margin-top:28px">This isn't a "post some content" deal. A 3-month term signed now covers the entire arc — <b>fight camp → fight week → fight night → post-fight</b> — and ends with Energia's logo on a televised championship main event.</p>
+      <p>Amiran walks out carrying the Georgian flag to challenge for a world title. Energia is one of Georgia's most iconic brands. Every post is one chapter in a single story that resolves on <b>September 12</b>.</p>
+    </div>
+    <div class="opp-card reveal">
+      <div class="date">SEP <span>12</span></div>
+      <div class="meta">OKTAGON 93 · BRITO vs. GOGOLADZE<br/>Winning Group Arena · Brno, CZ<br/>Main Event · Welterweight</div>
+      <span class="belt">★ Title Fight</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Why It Works</span>
+      <h2 class="display section-title">National, emotional and physical fit</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="num">/ 01</div><h3>Peak-reach moment</h3><p>A title main event is the biggest visibility window of the year — and the most exclusive placement, the fight shorts, lands on that broadcast.</p></div>
+      <div class="why-card reveal"><div class="num">/ 02</div><h3>Total audience overlap</h3><p>Borjomi and a Georgian national-pride athlete share almost the same audience. This is the brand carrying the country into the cage.</p></div>
+      <div class="why-card reveal"><div class="num">/ 03</div><h3>Authentic context</h3><p>Hydration, energy and recovery are real parts of a fight camp — Energia is the fuel, not a forced logo. He camps in Vegas with elite UFC partners.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="section pillars" id="pillars">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Content Pillars</span>
+      <h2 class="display section-title">Five angles, one story</h2>
+      <div class="rule"></div>
+      <p class="lede">Every post maps to a pillar and a placement. The mix balances brand integration with the narrative drive toward fight night.</p>
+    </div>
+    <div class="pillar-list reveal">
+      <div class="pillar"><div class="idx">A</div><div class="body"><h4>Fuel the Sniper</h4><p>Product-integrated: hydration in camp, energy before sessions, recovery after. Energia is the hero here.</p></div><div class="pct">30%<span>Of mix</span></div></div>
+      <div class="pillar"><div class="idx">B</div><div class="body"><h4>Road to the Title</h4><p>The narrative arc — challenger vs. two-time champ, the stakes, the countdown to Sept 12.</p></div><div class="pct">25%<span>Of mix</span></div></div>
+      <div class="pillar"><div class="idx">C</div><div class="body"><h4>Made in Georgia</h4><p>The emotional core — Georgian champion, the flag walkout, Borjomi as the iconic brand behind him.</p></div><div class="pct">20%<span>Of mix</span></div></div>
+      <div class="pillar"><div class="idx">D</div><div class="body"><h4>Inside Camp</h4><p>Behind the scenes from Vegas, elite training partners, the grind. High-engagement, authentic.</p></div><div class="pct">15%<span>Of mix</span></div></div>
+      <div class="pillar"><div class="idx">E</div><div class="body"><h4>Sniper Lore &amp; Fans</h4><p>Fastest-finish highlights, Q&amp;As, prediction polls and a product giveaway.</p></div><div class="pct">10%<span>Of mix</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="section" id="deliverables">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Committed Deliverables</span>
+      <h2 class="display section-title">What Energia gets, in writing</h2>
+      <div class="rule"></div>
+      <p class="lede">Volume is light in the build months and concentrated where it matters — fight week. Each post tags Energia, carries the hashtags, and ships with native Insights as proof.</p>
+    </div>
+    <div class="reveal">
+      <table class="table">
+        <thead><tr><th>Phase</th><th>Feed posts</th><th>Reels</th><th>Stories</th><th>Highlight</th></tr></thead>
+        <tbody>
+          <tr><td class="phase">M1 · Foundation</td><td class="num">2</td><td class="num">1</td><td class="num">6–8</td><td>Partnership announcement</td></tr>
+          <tr><td class="phase">M2 · Camp Build</td><td class="num">2</td><td class="num">1</td><td class="num">6–8</td><td>Product-integrated training</td></tr>
+          <tr><td class="phase">M3 · Fight Week</td><td class="num">3–4</td><td class="num">1</td><td class="num">15+</td><td>Weigh-in · walkout · result</td></tr>
+          <tr class="total"><td class="phase">Term total</td><td class="num">7–8</td><td class="num">3</td><td class="num">27+</td><td>+ profile presence</td></tr>
+        </tbody>
+      </table>
+      <p class="note">// Materially stronger than a standard "1 post + 2 stories / month" — appropriate, because this term contains a title fight.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section timeline" id="timeline">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Campaign Timeline</span>
+      <h2 class="display section-title">Built to peak on fight night</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="phase-grid reveal">
+      <div class="phase-col"><div class="pnum">01</div><h4>Foundation</h4><div class="when">Weeks 1–2</div><ul><li>Announce the partnership</li><li>Set the "Road to the Title" narrative</li><li>Bio &amp; profile presence</li><li>Finishes highlight Reel</li></ul></div>
+      <div class="phase-col"><div class="pnum">02</div><h4>Camp Build</h4><div class="when">Months 1–2</div><ul><li>Training content on branded gear</li><li>Hero product-integration post</li><li>Vegas / partner content</li><li>"Made in Georgia" piece</li></ul></div>
+      <div class="phase-col peak"><div class="pnum">03</div><h4>Fight Week</h4><div class="when">Final ~10 days</div><ul><li>Travel to Brno</li><li>Weigh-in &amp; face-off (jersey)</li><li>Walkout &amp; fight night (shorts)</li><li>Result post — both ready</li></ul></div>
+      <div class="phase-col"><div class="pnum">04</div><h4>Post-Fight</h4><div class="when">Sept 12 → end</div><ul><li>Thank-you / recap post</li><li>Evergreen best-of Reel</li><li>Asset hand-off to Energia</li><li>Renewal trigger if he wins</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACEMENTS -->
+<section class="section" id="placements">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Placement Inventory</span>
+      <h2 class="display section-title">The logo already lives on the kit</h2>
+      <div class="rule"></div>
+      <p class="lede">Real placements from the current run — proof Energia integrates naturally, not as an afterthought.</p>
+    </div>
+
+    <div class="place-feature reveal">
+      <img src="images/place_shorts.jpg" alt="Energia by Borjomi on the fight shorts" loading="lazy" />
+      <div class="grad"></div>
+      <div class="ftext">
+        <span class="badge">★ Most exclusive</span>
+        <h4>Fight Shorts</h4>
+        <p>Visible in every photo and video throughout the fight. On a title main event, this is the single highest-value asset in the deal.</p>
+      </div>
+    </div>
+
+    <div class="place-grid">
+      <div class="place-photo reveal">
+        <img src="images/place_jersey.jpg" alt="Energia by Borjomi on the walkout jersey" loading="lazy" />
+        <div class="grad"></div>
+        <div class="ptext"><span class="tag">Weigh-in · walkout</span><h4>Fight Jersey</h4><p>On camera at the ceremonial weigh-in, face-offs and the walkout.</p></div>
+      </div>
+      <div class="place-photo reveal">
+        <img src="images/place_training.jpg" alt="Energia by Borjomi on training gear" loading="lazy" />
+        <div class="grad"></div>
+        <div class="ptext"><span class="tag">Daily · in-camp</span><h4>Training Gear</h4><p>Featured across training sessions and media — already part of his kit.</p></div>
+      </div>
+      <div class="place-card reveal">
+        <span class="tag">Always-on</span>
+        <div class="stat">~19K</div>
+        <h4>Social Channels</h4>
+        <p>~9.2K IG · ~10K FB. Branded content, mentions, tags, fight updates and engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KPIs -->
+<section class="section timeline" id="kpis">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>What We Report</span>
+      <h2 class="display section-title">Measured, every month</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="kpi-grid reveal">
+      <div class="kpi"><div class="big">100<span class="u">%</span></div><div class="lbl">Delivery proof per post</div></div>
+      <div class="kpi"><div class="big">3<span class="u">×</span></div><div class="lbl">Monthly performance reports</div></div>
+      <div class="kpi"><div class="big">1<span class="u">↑</span></div><div class="lbl">Fight-night reach spike</div></div>
+      <div class="kpi"><div class="big">∞</div><div class="lbl">Reusable branded assets</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="section invest" id="cta">
+  <div class="wrap invest-grid">
+    <div class="reveal">
+      <span class="eyebrow"><svg class="reticle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="0" x2="12" y2="24"/><line x1="0" y1="12" x2="24" y2="12"/></svg>Investment</span>
+      <div class="price"><span class="cur">$</span>3,000<span class="per">Total · 3-month term</span></div>
+    </div>
+    <div class="terms reveal">
+      <b>USD 1,000</b> / month, across the full title-fight campaign<br/>
+      <b>Term</b> anchored to OKTAGON 93 — Sept 12, 2026<br/>
+      <b>Includes</b> jersey · shorts · training gear · social<br/>
+      <b>Plus</b> monthly reporting + post-fight asset library<br/>
+      <b>Exclusivity</b> in the beverage category for the term
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="finalcta">
+  <svg class="reticle-bg" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="58"/><circle cx="100" cy="100" r="3" fill="currentColor" stroke="none"/><line x1="100" y1="2" x2="100" y2="198"/><line x1="2" y1="100" x2="198" y2="100"/></svg>
+  <div class="wrap inner">
+    <h2 class="display">Put Energia in his <span class="red">corner</span> for the title</h2>
+    <a href="mailto:hello@example.com?subject=Energia%20%C3%97%20The%20Sniper%20Partnership" class="btn">Start the campaign <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer><div class="wrap foot-inner"><span>Energia by Borjomi × The Sniper</span><span>Proposal · 2026 · Confidential</span></div></footer>
+
+<script>
+  const topbar=document.getElementById('topbar');
+  const onScroll=()=>topbar.classList.toggle('solid',window.scrollY>40);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.16,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
